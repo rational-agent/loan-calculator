@@ -1,14 +1,14 @@
-package com.rationalagent.loancalculator.service;
+package com.rationalagent.loancalculator.loan;
 
-import com.rationalagent.loancalculator.calculator.CalculatorFactory;
 import com.rationalagent.loancalculator.calculator.LoanCalculator;
-import com.rationalagent.loancalculator.calculator.exceptions.LoanNotFoundException;
-import com.rationalagent.loancalculator.calculator.exceptions.LoanSpecificationNotPresent;
-import com.rationalagent.loancalculator.repository.LoanRepository;
-import com.rationalagent.loancalculator.repository.MonthlyPaymentRepository;
-import com.rationalagent.loancalculator.repository.PaymentRepository;
-import com.rationalagent.loancalculator.repository.model.Loan;
-import com.rationalagent.loancalculator.repository.model.LoanSpecification;
+import com.rationalagent.loancalculator.calculator.LoanCalculatorImpl;
+import com.rationalagent.loancalculator.loan.exceptions.LoanNotFoundException;
+import com.rationalagent.loancalculator.loan.exceptions.LoanSpecificationNotPresent;
+import com.rationalagent.loancalculator.loan.repository.LoanRepository;
+import com.rationalagent.loancalculator.loan.repository.MonthlyPaymentRepository;
+import com.rationalagent.loancalculator.loan.repository.PaymentRepository;
+import com.rationalagent.loancalculator.loan.repository.model.Loan;
+import com.rationalagent.loancalculator.loan.repository.model.LoanSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +16,6 @@ import java.util.List;
 
 @Service
 public class LoanService {
-
-    @Autowired
-    CalculatorFactory factory;
 
     @Autowired
     LoanRepository repository;
@@ -34,7 +31,7 @@ public class LoanService {
             throw new LoanSpecificationNotPresent("Loan specification is missing");
         }
         LoanSpecification spec = loan.getLoanSpecification();
-        LoanCalculator calculator = factory.createCalculator(spec.getAmortizationMethod());
+        LoanCalculator calculator = new LoanCalculatorImpl();
         Loan calculatedLoan = calculator.calculateLoan(spec);
 
         return update(calculatedLoan, id);

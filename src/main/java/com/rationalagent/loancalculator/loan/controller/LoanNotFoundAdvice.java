@@ -1,7 +1,7 @@
-package com.rationalagent.loancalculator.controller;
+package com.rationalagent.loancalculator.loan.controller;
 
-import com.rationalagent.loancalculator.calculator.exceptions.LoanNotFoundException;
-import com.rationalagent.loancalculator.calculator.exceptions.LoanSpecificationNotPresent;
+import com.rationalagent.loancalculator.loan.exceptions.LoanNotFoundException;
+import com.rationalagent.loancalculator.loan.exceptions.LoanSpecificationNotPresent;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

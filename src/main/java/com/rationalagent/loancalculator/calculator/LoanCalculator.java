@@ -1,9 +1,9 @@
 package com.rationalagent.loancalculator.calculator;
 
-import com.rationalagent.loancalculator.repository.model.Loan;
-import com.rationalagent.loancalculator.repository.model.LoanSpecification;
-import com.rationalagent.loancalculator.repository.model.MonthlyPayment;
-import com.rationalagent.loancalculator.repository.model.Payment;
+import com.rationalagent.loancalculator.loan.repository.model.Loan;
+import com.rationalagent.loancalculator.loan.repository.model.LoanSpecification;
+import com.rationalagent.loancalculator.loan.repository.model.MonthlyPayment;
+import com.rationalagent.loancalculator.loan.repository.model.Payment;
 
 import java.math.BigDecimal;
 import java.util.List;

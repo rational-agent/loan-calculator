@@ -1,8 +1,7 @@
-package com.rationalagent.loancalculator.controller;
+package com.rationalagent.loancalculator.loan.controller;
 
-import com.rationalagent.loancalculator.ApiError;
-import com.rationalagent.loancalculator.repository.model.Loan;
-import com.rationalagent.loancalculator.service.LoanService;
+import com.rationalagent.loancalculator.loan.LoanService;
+import com.rationalagent.loancalculator.loan.repository.model.Loan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.ObjectError;
@@ -23,7 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-public class LoanApiController {
+public class LoanController {
 
     @Autowired
     private LoanService service;

@@ -1,4 +1,4 @@
-package com.rationalagent.loancalculator.calculator.exceptions;
+package com.rationalagent.loancalculator.loan.exceptions;
 
 public class LoanNotFoundException extends RuntimeException {
 

@@ -1,9 +1,9 @@
 package com.rationalagent.loancalculator.calculator;
 
-import com.rationalagent.loancalculator.repository.model.AmortizationMethod;
-import com.rationalagent.loancalculator.repository.model.AmortizationSummary;
-import com.rationalagent.loancalculator.repository.model.LoanSpecification;
-import com.rationalagent.loancalculator.repository.model.MonthlyPayment;
+import com.rationalagent.loancalculator.loan.repository.model.AmortizationMethod;
+import com.rationalagent.loancalculator.loan.repository.model.AmortizationSummary;
+import com.rationalagent.loancalculator.loan.repository.model.LoanSpecification;
+import com.rationalagent.loancalculator.loan.repository.model.MonthlyPayment;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,10 +13,9 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class StraightLineLoanCalculatorTest {
+class LoanCalculatorImplTest {
 
     private LoanCalculator loanCalculator;
-    LoanCalculatorFactory factory = new LoanCalculatorFactory();
 
     LoanSpecification spec = new LoanSpecification(
             new BigDecimal("500000.00"),
@@ -29,7 +28,7 @@ class StraightLineLoanCalculatorTest {
 
     @BeforeEach
     void beforeEach() {
-        loanCalculator = factory.createCalculator(spec.getAmortizationMethod());
+        loanCalculator = new LoanCalculatorImpl();
     }
 
     @Test

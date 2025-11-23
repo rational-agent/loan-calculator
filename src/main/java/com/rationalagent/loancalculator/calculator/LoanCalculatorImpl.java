@@ -1,11 +1,11 @@
 package com.rationalagent.loancalculator.calculator;
 
-import com.rationalagent.loancalculator.repository.model.AmortizationSummary;
-import com.rationalagent.loancalculator.repository.model.Loan;
-import com.rationalagent.loancalculator.repository.model.LoanSpecification;
-import com.rationalagent.loancalculator.repository.model.MonthlyPayment;
-import com.rationalagent.loancalculator.repository.model.Payment;
-import com.rationalagent.loancalculator.repository.model.PaymentType;
+import com.rationalagent.loancalculator.loan.repository.model.AmortizationSummary;
+import com.rationalagent.loancalculator.loan.repository.model.Loan;
+import com.rationalagent.loancalculator.loan.repository.model.LoanSpecification;
+import com.rationalagent.loancalculator.loan.repository.model.MonthlyPayment;
+import com.rationalagent.loancalculator.loan.repository.model.Payment;
+import com.rationalagent.loancalculator.loan.repository.model.PaymentType;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -16,7 +16,7 @@ import java.util.function.BinaryOperator;
 
 import static com.rationalagent.loancalculator.calculator.LoanCalculatorHelper.getRoundedAmount;
 
-public class StraightLineLoanCalculator implements LoanCalculator {
+public class LoanCalculatorImpl implements LoanCalculator {
 
     /**
      * The unpaid portion of the loan amount. The principal balance does not include interest or any other charges.

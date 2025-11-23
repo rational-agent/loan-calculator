@@ -2,8 +2,8 @@
   "id": 1,
   "loanSpecification": {
     "id": 1,
-    "loanAmount": 480000.01,
-    "annualPercentageRate": 2,
+    "principal": 480000.01,
+    "interestRate": 2,
     "startDate": "2021-01-01",
     "endDate": "2051-01-01",
     "payDay": 25,

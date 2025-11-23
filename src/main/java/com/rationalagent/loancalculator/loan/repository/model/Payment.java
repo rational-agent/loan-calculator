@@ -1,4 +1,4 @@
-package com.rationalagent.loancalculator.repository.model;
+package com.rationalagent.loancalculator.loan.repository.model;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

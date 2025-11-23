@@ -1,4 +1,4 @@
-package com.rationalagent.loancalculator;
+package com.rationalagent.loancalculator.calculator;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

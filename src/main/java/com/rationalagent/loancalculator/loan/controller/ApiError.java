@@ -1,4 +1,4 @@
-package com.rationalagent.loancalculator;
+package com.rationalagent.loancalculator.loan.controller;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.http.HttpStatus;
